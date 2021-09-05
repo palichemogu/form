@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Starbuzz Bean Machine</title>
+    <link href="form.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>The Starbuzz Bean Machine</h1>
+    <h2>Fill out the form below and click submit to order</h2>
+<form action="https://starbuzzcoffee.com/processorder.php" method="POST"><!--table-->
+    <div class="tableRow">
+    <p>
+        Выберите кофе:
+         <select name="beans">
+            <option value="Смесь">Домашняя смесь</option>
+            <option value="Боливия">Боливия</option>
+            <option value="Гватемала">Гватемала</option>
+            <option value="Кения">Кения</option>
+        </select>
+    </p>
+    </div>
+
+    <div class="tableRow">
+    <p>
+        Тип:<br>
+        <input type="radio" name="beantype" checked value="зерна">Кофе в зернах<br>
+        <input type="radio" name="beantype" value="молотый">Молотый кофе
+    </p>
+    </div>
+
+    <div class="tableRow">
+    <p>
+        <label for="bags">Количество пакетиков:</label></p>
+        <p><input type="number" id="bags" name="bags" min="1" max="10">
+    </p>
+    </div>
+
+    <div class="tableRow">
+    <p>
+        Доставить к указанной дате : </p>
+        <p><input type="date" name="date">
+    </p>
+</div>
+
+<div class="tableRow">
+    <p>
+        Дополнительные услуги:<br>
+        <input type="checkbox" name="extras[]" value="подарочная упаковка">Подарочная упаковка<br>
+        <input type="checkbox" name="extras[]" value="каталог" checked>Доставка каталога вместе с заказом
+    </p>
+    </div>
+
+    <div class="tableRow">
+    <p class="heading">Доставить по адресу:</p>
+        <p></p>
+</div>
+<div class="tableRow">
+    <p>Имя:</p>
+    <p><input type="text" name="name" placeholder="Ivan" required></p>
+    </div>
+
+    <div class="tableRow">
+    <p>Адрес:</p>
+       <p> <input type="text" name="adress" placeholder="Igumenski,26,142" required></p>
+       </div>
+
+       <div class="tableRow">
+    <p>Город:</p>
+    <p><input type="text" name="city" placeholder="Minsk" required></p>
+    </div>
+
+    <div class="tableRow">
+    <p>Страна:</p>
+    <p><input type="text" name="state" placeholder="Belarus" required></p>
+    </div>
+
+    <div class="tableRow">
+    <p>Почтовый индекс:</p>
+    <p><input type="text" name="zip" placeholder="2202323" required></p>
+</div>
+
+<div class="tableRow">
+    <p>Телефон:</p>
+    <p><input type="tel" name="phone" placeholder="7916625" required></p>
+    </div>
+
+    <div class="tableRow">
+        <p>Комментарии клиентов:</p>
+        <p><textarea  placeholder="Введите текст" name="comments"></textarea></p>
+</div>
+
+<div class="tableRow">
+    <p></p>
+    <p>
+        <input type="submit" value="lessgo">
+        </p>
+        </div>
+</form>
+<!-- <fieldset>
+    <legend>Condiments</legend>
+    <input type="checkbox" name="spice" value="соль">
+    Соль <br>
+    <input type="checkbox" name="spice" value="перец">
+    Перец <br>
+    <input type="checkbox" name="spice" value="чеснок">
+    Чеснок
+   </fieldset> -->
+   <input type="file" name="doc">
+  </body>
+</html>
